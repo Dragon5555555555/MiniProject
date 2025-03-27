@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Last Element Finder</title>
+</head>
+<body>
+  <script>
+    let input = prompt("Введите элементы массива через запятую:");
+    let array = input.split(',');
+
+    if (array.length > 0) {
+      let lastElement = array[array.length - 1];
+      alert("Последний элемент: " + lastElement);
+    } else {
+      alert("Массив пустой.");
+    }
+  </script>
+</body>
+</html>
