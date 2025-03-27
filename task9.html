@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Splice Operations</title>
+</head>
+<body>
+  <script>
+    let input = prompt("Enter an array (comma-separated, e.g., a,b,c,d,e):");
+    let array = input.split(',');
+
+    // Remove 1 element at position 2
+    array.splice(2, 1);
+
+    // Insert element 'X' at position 1
+    array.splice(1, 0, 'X');
+
+    // Replace element at position 3 with 'Z'
+    array.splice(3, 1, 'Z');
+
+    alert("Result after splice operations: " + array.join(', '));
+  </script>
+</body>
+</html>
