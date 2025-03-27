@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Word and Repeats</title>
+</head>
+<body>
+  <script>
+    let arrayInput = prompt("Введите слова через запятую:");
+    let array = arrayInput.split(',');
+
+    let targetWord = prompt("Какое слово ищем?");
+    let found = array.includes(targetWord);
+
+    if (found) {
+      alert("Слово '" + targetWord + "' найдено!");
+
+      // Подсчёт повторяющихся букв
+      let chars = targetWord.split('');
+      let repeats = {};
+
+      chars.forEach(function(char) {
+        if (repeats[char]) {
+          repeats[char]++;
+        } else {
+          repeats[char] = 1;
+        }
+      });
+
+      let output = "Повторяющиеся символы:\n";
+      for (let char in repeats) {
+        if (repeats[char] > 1) {
+          output += `${char}: ${repeats[char]} раз(а)\n`;
+        }
+      }
+
+      if (output === "Повторяющиеся символы:\n") {
+        alert("В слове нет повторяющихся символов.");
+      } else {
+        alert(output);
+      }
+
+    } else {
+      alert("Слово не найдено в массиве.");
+    }
+  </script>
+</body>
+</html>
