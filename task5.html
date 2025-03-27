@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vowel Counter</title>
+</head>
+<body>
+  <script>
+    let input = prompt("Введите символы через запятую (например: a,b,c,d,e):");
+    let array = input.split(',');
+
+    let vowels = ['a', 'e', 'i', 'o', 'u'];
+    let count = 0;
+
+    array.forEach(function(char) {
+      char = char.trim().toLowerCase(); // убираем пробелы и приводим к нижнему регистру
+      if (vowels.includes(char)) {
+        count++;
+      }
+    });
+
+    alert("Количество гласных: " + count);
+  </script>
+</body>
+</html>
