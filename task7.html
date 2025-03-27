@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Case</title>
+</head>
+<body>
+  <script>
+    let input = prompt("Введите строку для смены регистра:");
+
+    let result = "";
+
+    for (let i = 0; i < input.length; i++) {
+      let char = input[i];
+      if (char === char.toUpperCase()) {
+        result += char.toLowerCase();
+      } else {
+        result += char.toUpperCase();
+      }
+    }
+
+    alert("Результат: " + result);
+  </script>
+</body>
+</html>
