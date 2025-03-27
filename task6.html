@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Longest Word Finder</title>
+</head>
+<body>
+  <script>
+    let input = prompt("Введите строку (например: I am learning JavaScript):");
+
+    let words = input.trim().split(/\s+/); // делим по пробелам
+    let longest = "";
+
+    words.forEach(function(word) {
+      if (word.length > longest.length) {
+        longest = word;
+      }
+    });
+
+    alert("Самое длинное слово: " + longest);
+  </script>
+</body>
+</html>
