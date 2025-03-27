@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>10-Digit Checker</title>
+</head>
+<body>
+  <script>
+    let input = prompt("Введите ровно 10 цифр:");
+
+    // Удаляем пробелы и проверяем только цифры
+    let cleanedInput = input.replace(/\D/g, "");
+
+    if (cleanedInput.length === 10) {
+      alert("✅ Введено 10 цифр: " + cleanedInput);
+    } else {
+      alert("❌ Нужно ввести ровно 10 цифр. Вы ввели: " + cleanedInput.length);
+    }
+  </script>
+</body>
+</html>
