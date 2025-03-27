@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Analyzer</title>
+</head>
+<body>
+  <script>
+    let input = prompt("Enter a string:");
+
+    let wordCount = input.trim().split(/\s+/).length;
+    let charCount = input.length;
+    let spaceCount = (input.match(/ /g) || []).length;
+    let specialCharCount = (input.match(/[^a-zA-Z0-9\s]/g) || []).length;
+
+    alert(
+      "Words: " + wordCount + "\n" +
+      "Characters: " + charCount + "\n" +
+      "Spaces: " + spaceCount + "\n" +
+      "Special Characters: " + specialCharCount
+    );
+  </script>
+</body>
+</html>
